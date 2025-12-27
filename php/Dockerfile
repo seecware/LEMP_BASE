@@ -7,6 +7,9 @@ RUN apt-get update && apt-get install -y \
 # Instalar extensiones de PHP necesarias para Laravel
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
+RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs
+
 # Instalar Composer (el manejador de paquetes de PHP)
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
