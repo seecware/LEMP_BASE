@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('barcode');
             $table->string('description');
             $table->string('notes');
-            $table->decimal('max_inventory',12,12);
-            $table->decimal('min_inventory',12,12);
+            $table->decimal('max_inventory',12,2);
+            $table->decimal('min_inventory',12,2);
             $table->timestamps();
         });
     }

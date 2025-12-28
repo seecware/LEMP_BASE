@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('brand');
             $table->string('model');
             $table->string('description')->nullable();
-            $table->decimal('horometer',18,18);
+            $table->decimal('horometer',18,2);
             $table->dateTime('model_year');
             $table->timestamps();
         });
